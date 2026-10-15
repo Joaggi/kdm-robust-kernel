@@ -1,0 +1,3 @@
+[submodule "external/kdm"]
+	path = kdm
+	url = https://github.com/Joaggi/kdm.git
