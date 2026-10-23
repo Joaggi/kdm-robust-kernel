@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kdm-robust-kernel"
+version = "0.1.0"
+description = "Robust kernels (Tukey, Huber, Cauchy, Andrews) for Kernel Density Matrices"
+readme = "README.md"
+requires-python = ">=3.10"
+# kdm itself is not listed: it is installed from the `kdm` submodule with
+# `pip install -e kdm`, so pip never pulls a different copy from PyPI.
+dependencies = [
+    "torch>=2.2",
+]
+
+[tool.setuptools.packages.find]
+# Only package kdm_robust_kernel, not the kdm/ submodule folder.
+include = ["kdm_robust_kernel*"]
